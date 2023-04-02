@@ -11,7 +11,7 @@ class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    search_fields = ['description',]
+    search_fields = ['description', 'title',]
     filterset_fields = ['title',]
     pagination_class = LimitOffsetPagination
     # при необходимости добавьте параметры фильтрации
